@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { products } from "@/app/products";
+import ProductPurchase from "@/components/ProductPurchase";
 
 interface ProductDetailPageProps {
   params: Promise<{
@@ -47,10 +49,14 @@ export default async function ProductDetailPage({
 
         <div className="mt-8 grid gap-10 rounded-2xl bg-white p-8 md:grid-cols-2">
           {/* 商品圖片 */}
-          <div className="flex h-96 items-center justify-center rounded-xl bg-gray-100">
-            商品圖片
+          <div className="relative flex h-96 items-center justify-center rounded-xl bg-gray-100">
+            <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-contain p-8"
+            />
           </div>
-
           {/* 商品資訊 */}
           <div>
             <p className="text-sm text-gray-500">
@@ -66,13 +72,11 @@ export default async function ProductDetailPage({
             </p>
 
             <p className="mt-6 leading-7 text-gray-600">
-              這是一款適合遊戲玩家使用的高品質周邊商品，
-              提供良好的操作體驗與使用感受。
+              {product.description}
             </p>
 
-            <button className="mt-8 w-full rounded-lg bg-gray-900 px-6 py-3 font-medium text-white transition hover:bg-gray-700">
-              加入購物車
-            </button>
+            <ProductPurchase product={product} />
+
           </div>
         </div>
       </div>
