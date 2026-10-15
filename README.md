@@ -3,11 +3,21 @@
 
 GameGear 是一個以電競周邊商品為主題的購物網站，使用 Next.js、React、TypeScript 與 Tailwind CSS 開發。透過這個專案練習前端網頁開發、元件拆分、動態路由、狀態管理與購物車功能。
 
+
 ## 專案展示
 
 - GitHub Repository：[GameGear](https://github.com/Hsueh09/gamegear)
 
-> 專案畫面截圖將於後續補上。
+### 首頁
+![GameGear 首頁](public/screenshots/home.png)
+
+### 商品詳細頁
+![商品詳細頁](public/screenshots/product-detail.png)
+
+### 購物車
+![購物車](public/screenshots/cart.png)
+
+
 
 ## 功能介紹
 
