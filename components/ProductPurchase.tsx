@@ -38,13 +38,6 @@ export default function ProductPurchase({
         > 
           加入購物車
         </button>
-
-        <Link
-          href="/cart"
-          className="mt-3 block w-full rounded-lg border border-gray-300 px-6 py-3 text-center font-medium text-gray-700 hover:bg-gray-100"
-        >
-          前往購物車
-        </Link>
     </div>
 
     </div>
